@@ -11,7 +11,7 @@ cp -r clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04/* /usr/local/
 wget https://github.com/torvalds/linux/archive/refs/tags/v6.11-rc7.tar.gz -O linux.tar.xz 
 tar -xf linux.tar.xz 
 mv linux-6.11-rc7 /linux 
-wget https://raw.githubusercontent.com/TomAPU/Linux611BugReort/master/kernelconfig -O /linux/.config 
+wget https://raw.githubusercontent.com/TomAPU/Linux611BugReport/master/kernelconfig -O /linux/.config 
 cd /linux 
 make LLVM=1 -j$(nproc)
 mv vmlinux /output && mv ./arch/x86/boot/bzImage /output
